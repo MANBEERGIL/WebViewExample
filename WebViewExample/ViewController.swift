@@ -18,7 +18,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         loadLambtonUrl()
     }
-    
+    @IBAction func showHistory()
+    {
+      
+    }
     
     func loadLambtonUrl()
     {
@@ -49,6 +52,15 @@ class ViewController: UIViewController {
             }else
             {
                 print("Can't Go back")
+            }
+            case 2://next button is pressed
+            if myWebKit.canGoForwaard
+            {
+                print("Go Next")
+                myWebKitView.goForward()
+            }else
+            {
+              print("Can''t Go  next")
             }
         default:
             print("No Navigation action found...")
